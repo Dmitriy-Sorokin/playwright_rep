@@ -10,7 +10,6 @@ def browser_fixture():
         page = context.new_page()
         viewport_size = {"width": 1920, "height": 1080}
         page.set_viewport_size(viewport_size=viewport_size)
-        page.goto("https://playwright-todomvc.antonzimaiev.repl.co/#/")
         yield page
         page.close()
         browser.close()
