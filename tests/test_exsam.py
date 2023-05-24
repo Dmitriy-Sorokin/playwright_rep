@@ -4,7 +4,8 @@ import time
 from playwright.sync_api import Page, expect
 
 
-def test_homepage_has_Playwright_in_title_and_get_started_link_linking_to_the_intro_page(page: Page):
+def test_homepage_has_Playwright_in_title_and_get_started_link_linking_to_the_intro_page(browser_fixture):
+    page = browser_fixture
     page.goto("https://playwright.dev/")
 
     # Expect a title "to contain" a substring.
